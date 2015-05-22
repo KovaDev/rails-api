@@ -89,6 +89,16 @@ RSpec.describe Api::V1::UsersController, type: :controller do
 		
 		end	
 	
+	end
+
+	describe "DELETE #destroy" do
+		before(:each) do
+			@user = FactoryGirl.create :user
+			delete :destroy, { id: @user.id }, format: :json
+		end	
+
+		it { expect(response).to have_http_status 204 }
+
 	end		
 
 end
