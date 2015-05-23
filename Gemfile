@@ -20,7 +20,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # api gems
 
-gem 'active_model_serializers'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: '0-8-stable'
 gem 'devise'
 gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
 gem 'compass-rails'
