@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Product, type: :model do
   
 	let(:product) { FactoryGirl.build :product }
+	
 	subject { product }
 
 	it { expect(subject).to respond_to(:title) }
@@ -16,5 +17,6 @@ RSpec.describe Product, type: :model do
 	it { expect(subject).to validate_presence_of(:user_id) }
 
 	it { expect(subject).not_to be_published } 
+	it { expect(subject).to belong_to(:user) }
 
 end
