@@ -37,6 +37,10 @@ class Api::V1::ProductsController < ApplicationController
 		head 204
 	end
 
+	def method
+		
+	end
+
 	private 
 
 		def product_params
